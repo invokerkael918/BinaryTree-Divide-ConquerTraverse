@@ -29,7 +29,7 @@ class Solution:
 
         left_a, left_b, left_lca = self.helper(root.left, A, B)
         right_a, right_b, right_lca = self.helper(root.right, A, B)
-
+        # left_lca and right_lca 判断两边是否同时有A或者B存在即左子树lca和右子树lca
         a = left_a or right_a or root == A
         b = left_b or right_b or root == B
 
